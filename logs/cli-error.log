@@ -1,0 +1,30 @@
+2022-08-29 12:38:36 Error: [RuntimeException] Unknown command `cake sever`. Run `cake --help` to get the list of valid commands. in C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 346
+Stack Trace:
+#0 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'sever')
+#1 C:\xampp\htdocs\headers\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2022-08-29 14:23:25 Error: [RuntimeException] Unknown command `cake sever`. Run `cake --help` to get the list of valid commands. in C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 346
+Stack Trace:
+#0 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'sever')
+#1 C:\xampp\htdocs\headers\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2022-08-29 23:54:24 Error: [Error] Call to a member function allow() on bool in C:\xampp\htdocs\headers\src\Controller\UsersController.php on line 120
+Stack Trace:
+#0 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Controller\Controller.php(273): App\Controller\UsersController->initialize()
+#1 C:\xampp\htdocs\headers\vendor\cakephp\bake\src\Shell\Task\TestTask.php(330): Cake\Controller\Controller->__construct(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\xampp\htdocs\headers\vendor\cakephp\bake\src\Shell\Task\TestTask.php(237): Bake\Shell\Task\TestTask->buildTestSubject('Controller', 'App\\Controller\\...')
+#3 C:\xampp\htdocs\headers\vendor\cakephp\bake\src\Shell\Task\ControllerTask.php(213): Bake\Shell\Task\TestTask->bake('Controller', 'Users')
+#4 C:\xampp\htdocs\headers\vendor\cakephp\bake\src\Shell\Task\ControllerTask.php(162): Bake\Shell\Task\ControllerTask->bakeTest('Users')
+#5 C:\xampp\htdocs\headers\vendor\cakephp\bake\src\Shell\Task\ControllerTask.php(69): Bake\Shell\Task\ControllerTask->bake('Users')
+#6 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ControllerTask->main('users')
+#7 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#8 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#9 C:\xampp\htdocs\headers\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#10 C:\xampp\htdocs\headers\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#11 {main}
+
+
