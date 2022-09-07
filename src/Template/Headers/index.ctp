@@ -66,119 +66,179 @@ $cakeDescription = 'zogravity';
                         </div>
             </div>
             <?= $this->Html->script('slider.js') ?>
-            <!-- <script>
-                    const openBar = document.querySelector('.js-open-bar')
-                    const closeBar = document.querySelector('.js-close-bar')
-                    const listBar = document.querySelector('.js-bar')
-                    function showBar (){
-                        listBar.classList.add('open1')
-                    }
-                    function hideBar (){
-                        listBar.classList.remove('open1')
-                    }
+           </div>  
+                       
 
-                    openBar.addEventListener('click', showBar)
-                    closeBar.addEventListener('click', hideBar)
-
-            </script> -->
-
-        </div>
-
-        
+            
 <!-- ====================================================================================================================== -->
-    <div id="lider" style="background-color:<?= $header['my_background'] ?>">
-        <div class="list_slider">
-        
-        <div class="list_item">
-            <div class="header_container" >
-                
-            <?= $this->Html->image($header->my_img) ?>
-                    <div class="item_mute"><i class="fa-solid fa-volume-xmark"></i></div>
+<div id="lider" style="background-color:<?= $header['background'] ?>">
+    
+    
+       
+                     <div class="header_container" >
+                            
+                            <?= $this->Html->image($header->img) ?>
+                                <div class="item_mute"><i class="fa-solid fa-volume-xmark"></i></div>
 
-                
-                    <div class="container_title" style="color: <?= $header['my_color'] ?>;">
-                            <h1 class="font_blue">  <?= $header['my_about']?></h1>
+                            
+                                <div class="container_title">
+                                        <h1 class="font_blue" style="color: <?= $header['color'] ?>;">  <?= $header['about']?></h1>
+                                
+                                
+                                <div class="container_about">
+                                    <p style="color: <?= $header['color'] ?>;"><?= $header['title']?></p>
+                                </div>
+                                <div class="container_button">
+                                    <a href="" style="color: <?= $header['color'] ?>;"><?= __('Descouvrez zO Gravity') ?></a>
+                                </div>
+                                <div class="container_item">
+                                    <i class="fa-solid fa-circle-play"></i><div class="item_vd"><p style="color: <?= $header['color'] ?>;"><?= __('voir la vidéo') ?></p></div>
+                                </div>
+                            </div>
+                                
+                    </div>
+    <div class="list_slider">                
+             <div class="list_item">
+             <?php endforeach; ?> 
+                            <?php foreach ($datas as $data): ?>
                     
+
                     
-                    <div class="container_about">
-                        <p style="color: <?= $header['my_color'] ?>;"><?= __('Avec zO Gravity, descouvrela simplicité et la performance dune gestion de projet collaborative.') ?></p>
-                    </div>
-                    <div class="container_button">
-                        <a href="" style="color: <?= $header['my_color'] ?>;"><?= __('Descouvrez zO Gravity') ?></a>
-                    </div>
-                    <div class="container_item">
-                        <i class="fa-solid fa-circle-play"></i><div class="item_vd"><p style="color: <?= $header['my_color'] ?>;"><?= __('voir la vidéo') ?></p></div>
-                    </div>
-                </div>
-                    
-        
-                                                        <?php foreach ($sliders as $slider): ?>
-                
-                <div class="slide_box1"></div>
-                <div class="slider_content">
-                    <div class="slider_titel"><p><?= __('PRESSE') ?></p>
-                        <div class="next_pre">
-                                <div class="slider_next next" > <i class="fa-solid fa-angle-left"></i></div>
-                                <div class="slider_pre prev" ><i class="fa-solid fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                        <div class="slider_h1"><h1><?= $slider['title']?></h1></div>
-                        <div class="slider_about"><?= $slider['about']?></div>
-                        <div class="slider_note">
-                            <div class="note"><a href="<?= $slider['link_not']?>"><?= __('Stéphane Touchet<br><a>PMO service client Orange Sud-Ouest') ?></a></div> 
-                            <div class="cycle"><a href="<?= $slider['link']?>"><?= __('Lire l’article ') ?><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div> 
-                        </div>
-                </div>
-                
-                <div class="slide_box2"></div>
-                
-                                                            <?php endforeach; ?> 
-            </div>
-        </div>                               
-        
-        
+
+
+                                        
+                            <div class="slide_box1"></div>
+                            <div class="slider_content">
+                                <div class="slider_titel"><p><?=$data['title'] ?></p>
+                                    <div class="next_pre">
+                                            <div class="slider_next next" > <i class="fa-solid fa-angle-left"></i></div>
+                                            <div class="slider_pre prev" ><i class="fa-solid fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                                    <div class="slider_h1"><?= $this->Html->image($data->logo) ?></div>
+                                    <div class="slider_about"><?= __($data['about'])?></div>
+                                    <div class="slider_note">
+                                        <div class="note"><a href=""><?= $data['author']?><?= $data['dress']?></a></div> 
+                                        <div class="cycle"><a href="<?= $data['link']?>"><?=__('Lire l’article')?><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div> 
+                                    </div>
+                                    <div class="slide_box2"></div>
+                            
+                            
+             </div>                               
+    
+    
     </div>
-    
    
+    <!-- ============== -->
 
     
+    
+    <div class="list_item">
 
 
 
+                          
+            <div class="slide_box1"></div>
+            <div class="slider_content">
+                <div class="slider_titel"><p><?=$data['title']?></p>
+                    <div class="next_pre">
+                            <div class="slider_next next" > <i class="fa-solid fa-angle-left"></i></div>
+                            <div class="slider_pre prev" ><i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </div>
+                    <div class="slider_h1"><?= $this->Html->image($data->logo) ?></h1></div>
+                    <div class="slider_about"><?= __($data['about'])?></div>
+                    <div class="slider_note">
+                        <div class="note"><a href=""><?= $data['author']?><?= $data['dress']?></a></div> 
+                        <div class="cycle"><a href="<?= $data['link']?>"><?=__('Lire l’article')?><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div> 
+                     </div>
+                     <div class="slide_box2"></div>
+            </div>
+            
+            
+            
+                                     
+    
+    
+    </div>
 
+    <!-- ============ -->
+     
+
+    <div class="list_item">
+
+
+                          
+            
+             <div class="slider_content">
+                <div class="slider_titel"><p><?= $data['title'] ?></p>
+                    <div class="next_pre">
+                            <div class="slider_next next" ><i class="fa-solid fa-angle-left"></i></div>
+                            <div class="slider_pre prev" ><i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                </div>
+                    <div class="slider_h1"><?= $this->Html->image($data->logo) ?></h1></div>
+                    <div class="slider_about"><?= __($data['about'])?></div>
+                    <div class="slider_note">
+                        <div class="note"><a href=""><?= $data['author']?><?= $data['dress']?></a></div> 
+                        <div class="cycle"><a href="<?= $data['link']?>"><?=__('Lire l’article')?><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div> 
+                     </div>
+                     <div class="slide_box2"></div>
+            </div>
+            
+            
+            
+                                  
+    
+    
+    </div>
+</div>
+<?php endforeach; ?> 
+   
+    <script>
+    $(document).ready(function(){
+    $('.list_slider').slick({
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    }
+
+    );
+    });;
+    </script>
+
+</div>
+
+   
          
-<div id="content">
+
+     <!-- ========================================================================================================================================    -->
+<?php foreach ($pours as $pour): ?>
+        <div id="content">
             <div class="content_pfc">
-                <div class="content_pfc_titel"><?= __('POUR FAIRE COURT.') ?></div>
+                <div class="content_pfc_titel"><?= $pour['logo'] ?></div>
                 <div class="content_pfc_text">
-                <h4>   <?= __('Z0 Gravity est un logiciel de gestion multi-projets : </h4>
-                    quelle que soit leur complexité,
-                     vous gérez facilement les plannings,
-                     les budgets et les ressources humaines de vos projets par un 
-                     usage transversal et collaboratif.') ?> </div>
+                <h4 style="color:#fff";> <?= $pour['about'] ?>  </h4></div>
             </div>
             <div class="content_layout">
                 <div class="content_layot_text">
-                    <div class="fr"><h1><?= __('Notre engagement:') ?></h1></div>
-                    <div class="p"><p><?= __('Cest aider tout type doranisation á resaliser ses projest avec un seul mot dorder :') ?></p></div>
-                    <div class="last"><h1><?= __('sim-pli-ci-té!') ?></h1></div>
+                    <div class="fr"><h1 style="color:#fff"><?= $pour['Notre_engagement'] ?></h1></div>
+                    <div class="p"><p><?= $pour['about_notre'] ?></p></div>
+                    <div class="last"><h1><?= $pour['note'] ?></h1></div>
                     
                 </div>
                 <div class="content_layout_inset"><?= $this->Html->image('mo.png') ?></div>
-                <div class="content_layot_img"><?= $this->Html->image('m1.jpg') ?></div>
+                <div class="content_layot_img"><?= $this->Html->image($pour['layout_img']) ?></div>
             </div>
             <div class="content_about">
-                <div class="content_about_title"><?= __('Découvrez l’univers z0 Gravity') ?></div>
-                <div class="content_about_text"><?= __('Plannings, budgets, calendriers…
-                     En un clin dœil, vous avez une vision globale et stratégique 
-                    de lavancée de vos projets en temps réel !') ?>
+                <div class="content_about_title"><?= $pour['title2'] ?></div>
+                <div class="content_about_text"><?= $pour['about2'] ?>
                 </div>
-                <div class="conteant_about_button"><i class="fa-solid fa-play"></i> <a href=""><?= __('Présentation vidéo') ?></a></div>
+                <div class="conteant_about_button"><i class="fa-solid fa-play"></i> <a href="<?= $pour['link'] ?>"><?= $pour['bnt'] ?></a></div>
             </div>
             <div class="content_app">
             <?= $this->Html->image('app.jpg') ?>
             </div>   
-
+                                                                           
         </div>
 
 
@@ -309,7 +369,24 @@ $cakeDescription = 'zogravity';
                      la langue et le contenu de z0gravity.com changeront.') ?>
                 </div>
                 <div class="langue">
-                    <ul>
+                      
+                                                            <?php
+                                      
+
+                                        echo $this->Form->create(NULL,array('url'=>'/locale'));
+                                        echo $this->Form->radio("locale",
+                                            [
+                                                ['value'=>'en_US','text'=>'English'],
+                                                ['value'=>'es','text'=>'spanish'],
+                                                ['value'=>'vi','text'=>'VietNam'],
+                                                
+                                                
+                                            ]
+                                        );
+                                        echo $this->Form->button('Change Language');
+                                        echo $this->Form->end();
+                                        ?>
+                    <!-- <ul>
                     <div class="ul">
                         <li>Deutsch </li>     
                         <li>English </li>
@@ -333,7 +410,7 @@ $cakeDescription = 'zogravity';
                     </div>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <?= $this->Html->script('changer.js') ?>

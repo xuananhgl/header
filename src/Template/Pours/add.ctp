@@ -1,7 +1,5 @@
-
-
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+<ul class="side-nav">
     </li>
          <li class="heading"><h3><?= $this->Html->link(__('Z0graviry'), ['controller' => 'Headers', 'action' => 'index']) ?></h3></li>
           <li class="heading"><h6><?= __('PRESSE') ?></h6></li>
@@ -20,27 +18,29 @@
           <li><?= $this->Html->link(__('LOGOUT'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
     </ul>
 </nav>
-<div class="users form large-9 medium-8 columns content">
-   <?php
-     echo $this->Form->create($header);
+<div class="articles form large-9 medium-8 columns content">
+  <?= $this->Form->create($pour) ?>
+  <fieldset>
+    <legend><?= __('Add New pours') ?></legend>
+    <?php
+     echo $this->Form->create($pour);
      echo $this->Form->control('user_id', ['type' => 'hidden', 'value' => 1]);
-     echo $this->Form->control('munber_style');
-     echo $this->Form->control('img');
-     echo $this->Form->control('color');
-      echo $this->Form->control('background');
-     echo $this->Form->control('bnt');
-     echo $this->Form->control('bnt_video');
-      echo $this->Form->control('title');
-      
-      echo $this->Form->input('about');
-     
+     echo $this->Form->control('title');
+     echo $this->Form->control('logo');
+      echo $this->Form->control('layout_img');
+     echo $this->Form->control('Notre_engagement');
+      echo $this->Form->control('about_notre', ['rows' => '3']);
+     echo $this->Form->control('note');
+     echo $this->Form->control('link');
+      echo $this->Form->control('title2');
+      echo $this->Form->input('about2', ['rows' => '3']);
+      echo $this->Form->input('bnt');
+      echo $this->Form->input('about', ['rows' => '3']);
+      echo $this->Form->input('french', ['rows' => '3']);
+      echo $this->Form->input('spanish', ['rows' => '3']);
+      echo $this->Form->input('vietnam', ['rows' => '3']);
     ?>
-    </fieldset>
-            <?= $this->Form->postLink(
-                            __('Delete'),
-                            ['action' => 'delete', $header->id],
-                            ['confirm' => __('Are you sure you want to delete # {0}?', $header->id)])
-            ?>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+  </fieldset>
+  <?= $this->Form->button(__('Submit')) ?>
+  <?= $this->Form->end() ?>
 </div>

@@ -16,7 +16,9 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-
+use Cake\ORM\Behavior\Translate\TranslateTrait;
+use Cake\I18n\I18n;
+use Cake\I18n\PressesI18n;
 /**
  * Application Controller
  *
@@ -71,4 +73,9 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
     }
+    public function isAuthorized($user)
+{
+    // By default deny access.
+    return false;
+}
 }

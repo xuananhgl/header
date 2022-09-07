@@ -1,7 +1,6 @@
 
-
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+     <ul class="side-nav">
     </li>
          <li class="heading"><h3><?= $this->Html->link(__('Z0graviry'), ['controller' => 'Headers', 'action' => 'index']) ?></h3></li>
           <li class="heading"><h6><?= __('PRESSE') ?></h6></li>
@@ -21,25 +20,30 @@
     </ul>
 </nav>
 <div class="users form large-9 medium-8 columns content">
-   <?php
-     echo $this->Form->create($header);
-     echo $this->Form->control('user_id', ['type' => 'hidden', 'value' => 1]);
-     echo $this->Form->control('munber_style');
-     echo $this->Form->control('img');
-     echo $this->Form->control('color');
-      echo $this->Form->control('background');
-     echo $this->Form->control('bnt');
-     echo $this->Form->control('bnt_video');
-      echo $this->Form->control('title');
-      
+    <?= $this->Form->create($pour) ?>
+    <fieldset>
+        <legend><?= __('Edit Pours') ?></legend>
+        <?php
+    echo $this->Form->control('title');
+     echo $this->Form->control('logo');
+      echo $this->Form->control('layout_img');
+     echo $this->Form->control('Notre_engagement');
+      echo $this->Form->control('about_notre');
+     echo $this->Form->control('note');
+     echo $this->Form->control('link');
+      echo $this->Form->control('title2');
+      echo $this->Form->input('about2');
+      echo $this->Form->input('bnt');
       echo $this->Form->input('about');
-     
-    ?>
+      echo $this->Form->input('french');
+      echo $this->Form->input('spanish');
+      echo $this->Form->input('vietnam');  
+        ?>
     </fieldset>
             <?= $this->Form->postLink(
                             __('Delete'),
-                            ['action' => 'delete', $header->id],
-                            ['confirm' => __('Are you sure you want to delete # {0}?', $header->id)])
+                            ['action' => 'delete', $pour->id],
+                            ['confirm' => __('Are you sure you want to delete # {0}?', $pour->id)])
             ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

@@ -1,6 +1,6 @@
 
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+     <ul class="side-nav">
     </li>
          <li class="heading"><h3><?= $this->Html->link(__('Z0graviry'), ['controller' => 'Headers', 'action' => 'index']) ?></h3></li>
           <li class="heading"><h6><?= __('PRESSE') ?></h6></li>
@@ -21,48 +21,44 @@
 </nav>
 
 <div class="users view large-9 medium-8 columns content">
-    <h3><?= h($header->id) ?></h3>
+    <h3><?= h($pour->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($header->title) ?></td>
+            <td><?= h($pour->title) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('munber_style ') ?></th>
-            <td><?= h($header->munber_style ) ?></td>
+            <th scope="row"><?= __('Logo') ?></th>
+            <td><?= h($pour->logo) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('img') ?></th>
-            <td><?= h($header->my_img) ?></td>
+            <th scope="row"><?= __('Notre_engagement') ?></th>
+            <td><?= h($pour->Notre_engagement) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('color') ?></th>
-            <td><?= h($header->my_color) ?></td>
+            <th scope="row"><?= __('About') ?></th>
+            <td><?= h($pour->about) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('about') ?></th>
-            <td><?= h($header->my_about) ?></td>
+            <th scope="row"><?= __('about_notre') ?></th>
+            <td><?= h($pour->about_notre) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('title') ?></th>
-            <td><?= h($header->my_title) ?></td>
+            <th scope="row"><?= __('layout_img') ?></th>
+            <td><?= h($pour->layout_img) ?></td>
         </tr>
          <tr>
-            <th scope="row"><?= __('bnt') ?></th>
-            <td><?= h($header->bnt) ?></td>
+            <th scope="row"><?= __('note') ?></th>
+            <td><?= h($pour->note) ?></td>
         </tr>
          <tr>
-            <th scope="row"><?= __('bnt') ?></th>
-            <td><?= h($header->bnt) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('bnt_video') ?></th>
-            <td><?= h($header->bnt_video) ?></td>
+            <th scope="row"><?= __('link') ?></th>
+            <td><?= h($pour->link) ?></td>
         </tr>
     </table>
-                    <?= $this->Html->link(__('View'), ['controller' => 'Headers', 'action' => 'view', $header->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Headers', 'action' => 'edit', $header->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Headers', 'action' => 'delete', $header->id], ['confirm' => __('Are you sure you want to delete # {0}?', $header->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Pours', 'action' => 'view', $pour->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Pours', 'action' => 'edit', $pour->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Pours', 'action' => 'delete', $pour->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pour->id)]) ?>
                 </td>
             </tr>
           
